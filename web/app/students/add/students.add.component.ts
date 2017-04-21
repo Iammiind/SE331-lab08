@@ -29,7 +29,7 @@ export class StudentsAddComponent {
   @ViewChild('fileInput') inputEl: ElementRef;
   addStudent(student: Student) {
     let result: Student;
-    console.log(student)
+    console.log(student);
     let inputEl: HTMLInputElement = this.inputEl.nativeElement;
 
     this.studentDataService.addStudent(student,inputEl.files.item(0))

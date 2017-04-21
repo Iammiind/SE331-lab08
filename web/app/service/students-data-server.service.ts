@@ -70,7 +70,7 @@ export class StudentsDataServerService {
     return this.http.post('http://localhost:8080/student/image', formData)
       .flatMap(filename => {
         student.image = filename.text();
-        student.file = null;
+        // student.file = null;
         let headers = new Headers({'Content-Type': 'application/json'});
         let options = new RequestOptions({headers: headers, method: 'post'});
         let body = JSON.stringify(student);
